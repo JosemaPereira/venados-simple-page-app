@@ -1,0 +1,420 @@
+@use 'variables';
+
+@media (max-width: 1020px) {
+  .statistics {
+    thead {
+      tr {
+        th {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .statistics {
+    thead {
+      tr {
+        th {
+          padding: 11px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .ico-calendar:before {
+    width: 30px;
+    height: 30px;
+  }
+  .match-content {
+    .calendar {
+      h3 {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .info-match {
+    margin-left: 30px;
+    h2 {
+      font-size: 26px;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .match-content {
+    padding: 15px;
+  }
+
+  .table {
+    padding-top: 15px;
+  }
+
+  .tabs {
+    padding: 5px;
+    ul {
+      li {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .match-separator {
+    margin-top: 20px;
+    h3 {
+      font-size: 14px;
+    }
+  }
+
+  .statistics {
+    thead {
+      tr {
+        th {
+          padding: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .statistics {
+    thead {
+      tr {
+        th {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 655px) {
+  .header {
+    height: 90px;
+    .title {
+      h1 {
+        line-height: 80px;
+        font-size: 30px;
+      }
+    }
+    .logo {
+      img {
+        width: 60px;
+      }
+    }
+  }
+  .statistics-cointainer {
+    overflow: auto;
+  }
+  .statistics {
+    thead {
+      tr {
+        th {
+          padding: 1px;
+          font-size: 12px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          font-size: 12px;
+          img {
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+  .menu {
+    ul {
+      li {
+        font-size: 12px;
+      }
+    }
+  }
+  .profile-card {
+    width: 100px;
+    height: 170px;
+    padding: 15px;
+    margin: 15px;
+    margin-bottom: 40px;
+  }
+  .profile-front {
+    .picture {
+      img {
+        height: 130px;
+      }
+    }
+  }
+  .profile-back {
+    .team-content {
+      padding: 3px;
+      .name {
+        font-size: 14px;
+      }
+      .positionName {
+        font-size: 12px;
+      }
+      .information {
+        font-size: 14px;
+      }
+      span {
+        font-size: 14px;
+      }
+    }
+    &:after {
+      background-size: contain;
+      top: 30;
+    }
+  }
+
+  .positions {
+    .position-title {
+      margin-top: 15px;
+    }
+  }
+  .info-match {
+    margin-left: 25px;
+    h2 {
+      font-size: 20px;
+      padding: 10px;
+      font-size: 18px;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .match-content {
+    padding: 10px;
+    .calendar {
+      padding: 2px;
+      h3 {
+        font-size: 12px;
+      }
+    }
+  }
+  .match-separator {
+    margin-top: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-collapse {
+    display: block;
+    ul {
+      list-style-type: none;
+      li {
+        font-size: 30px;
+        letter-spacing: 1px;
+        line-height: 45px;
+        font-family: variables.$font_symbols;
+        display: block;
+        width: 50px;
+        a {
+          display: block;
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+
+  .menu-mobile {
+    display: block;
+    margin: 0px auto;
+    background: black;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.5s;
+    width: 0px;
+    ul li {
+      font-size: 20px;
+      margin: 0px 20px 0px 20px;
+      letter-spacing: 1px;
+      line-height: 45px;
+      font-family: Helvetica, Arial, sans-serif;
+      a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        transition: all 200ms;
+        &:hover {
+          transform: scale(1.1, 1.1);
+        }
+        &#close-btn {
+          position: absolute;
+          top: 10;
+          right: 25px;
+          font-size: 15px;
+          margin-left: 50px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .positions {
+    .position-title {
+      font-size: 18px;
+    }
+  }
+  .statistics {
+    thead {
+      tr {
+        th {
+          &.mobile {
+            display: block;
+          }
+          &.default {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 525px) {
+  body {
+    width: 95%;
+  }
+  .header {
+    height: 60px;
+    margin-top: 20px;
+    padding: 15px;
+    .title {
+      margin-left: 10px;
+      h1 {
+        line-height: 48px;
+        font-size: 24px;
+      }
+    }
+    .logo {
+      margin-left: 10px;
+      img {
+        width: 48px;
+      }
+    }
+  }
+  .match-content {
+    background: none;
+    .ico-calendar {
+      display: none;
+    }
+    .calendar {
+      h3 {
+        color: black;
+        padding-top: 10px;
+      }
+    }
+    .info-match {
+      margin-left: 20px;
+      h2 {
+        color: black;
+        font-size: 14px;
+        padding: 0px;
+      }
+    }
+  }
+  .statistics {
+    tbody {
+      tr {
+        td {
+          font-size: 12px;
+          padding: 8px;
+          img {
+            width: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .match-content {
+    .info-match {
+      margin-left: 15px;
+      h2 {
+        margin: 0px 12px 0px 12px;
+      }
+    }
+  }
+  .profile-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .tabs {
+    padding: 5px;
+    margin-left: 10px;
+    ul {
+      li {
+        margin: 0px 15px 0px 0px;
+      }
+    }
+  }
+  .match-separator {
+    padding-left: 15px;
+  }
+  .table {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .match-content {
+    .info-match {
+      margin-left: 10px;
+      h2 {
+        margin: 0px 5px 0px 5px;
+      }
+    }
+  }
+
+  .match-separator {
+    padding-left: 12px;
+  }
+  .table {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
+    height: 45px;
+    margin-top: 15px;
+    padding: 10px;
+    .title {
+      margin-left: 10px;
+      h1 {
+        line-height: 40px;
+        font-size: 19px;
+      }
+    }
+    .logo {
+      margin-left: 10px;
+      img {
+        width: 38px;
+      }
+    }
+  }
+}

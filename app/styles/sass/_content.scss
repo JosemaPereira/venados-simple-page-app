@@ -1,0 +1,18 @@
+@use 'variables';
+
+.content {
+  display: block;
+  background-color: variables.$color_background;
+  margin-top: 25px;
+  height: auto;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.info {
+  display: block;
+  margin: 0px auto;
+  margin-top: 20px;
+  background-color: #efefef;
+  padding: 10px;
+}

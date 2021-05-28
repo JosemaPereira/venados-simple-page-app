@@ -1,0 +1,36 @@
+@use 'variables';
+
+.statistics {
+  border-collapse: collapse;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-spacing: 5px 5px;
+  thead {
+    border-bottom: 5px solid black;
+    tr {
+      th {
+        font-family: variables.$font_novecento;
+        font-size: 15px;
+        padding: 20px;
+        &.mobile {
+          display: none;
+        }
+      }
+    }
+  }
+  tbody {
+    tr{
+      td {
+        font-size: 15px;
+        text-align: center;
+        font-family: variables.$font_novecento;
+        padding: 10px;
+      }
+      &.light{
+        background-color:#006a2842;
+      }
+    }
+    
+  }
+}

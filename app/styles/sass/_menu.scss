@@ -1,0 +1,23 @@
+.menu {
+  margin: 0px auto;
+  background: black;
+  padding: 5px;
+  border-radius: 10px;
+  ul li {
+    font-size: 15px;
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      transition: all 200ms;
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
+}

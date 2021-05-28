@@ -1,0 +1,28 @@
+@use 'variables';
+
+@font-face {
+  font-family: variables.$font_axioforma;
+  src: url(./fonts/AxiformaRegular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: variables.$font_novecento;
+  src: url(./fonts/NovecentoWideDemiBold.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: variables.$font_symbols;
+  src: url("./fonts/websymbols-regular-webfont.eot");
+  src: url("./fonts/websymbols-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/websymbols-regular-webfont.woff") format("woof"),
+    url("./fonts/websymbols-regular-webfont.ttf") format("truetype"),
+    url("./fonts/websymbols-regular-webfont.svg#webSymbolsRegular")
+      format("svg");
+  font-style: normal;
+  font-weight: normal;
+}

@@ -1,0 +1,694 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: url("https://www.venadosfc.com.mx/templates/venadosfc/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#app {
+  width: 100%;
+  margin: 0px auto;
+}
+
+body {
+  width: 80%;
+  margin: 0px auto;
+  height: 100%;
+}
+
+.ico-calendar:before {
+  background: url(./svg/calendario.svg);
+  background-size: cover;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  content: "";
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.menu-collapse {
+  display: none;
+}
+
+@font-face {
+  font-family: Axiforma;
+  src: url(./fonts/AxiformaRegular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Novecento;
+  src: url(./fonts/NovecentoWideDemiBold.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: WebSymbolsRegular;
+  src: url("./fonts/websymbols-regular-webfont.eot");
+  src: url("./fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/websymbols-regular-webfont.woff") format("woof"), url("./fonts/websymbols-regular-webfont.ttf") format("truetype"), url("./fonts/websymbols-regular-webfont.svg#webSymbolsRegular") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+.header {
+  height: 125px;
+  margin-top: 30px;
+  background: #005923;
+  background: radial-gradient(circle, #005923 0%, #004030 50%);
+  padding: 20px;
+}
+.header .logo {
+  float: left;
+  margin-left: 25px;
+}
+.header .logo img {
+  width: 100px;
+}
+.header .title {
+  float: left;
+  margin-left: 25px;
+}
+.header .title h1 {
+  line-height: 125px;
+  font-size: 48px;
+  font-family: Axiforma;
+  padding: 5px;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 3px 3px 5px black;
+}
+
+.content {
+  display: block;
+  background-color: #fdbd2d;
+  margin-top: 25px;
+  height: auto;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.info {
+  display: block;
+  margin: 0px auto;
+  margin-top: 20px;
+  background-color: #efefef;
+  padding: 10px;
+}
+
+.menu {
+  margin: 0px auto;
+  background: black;
+  padding: 5px;
+  border-radius: 10px;
+}
+.menu ul li {
+  font-size: 15px;
+  display: inline-block;
+  margin: 0px 20px 0px 20px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.menu ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  transition: all 200ms;
+}
+.menu ul li a:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.tabs {
+  display: inline-block;
+  margin: 0px auto;
+  margin-left: 20px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.tabs ul li {
+  font-size: 15px;
+  display: inline-block;
+  margin: 0px 20px 0px 20px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.tabs ul li a {
+  display: block;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 200ms;
+}
+.tabs ul li a:hover {
+  transform: scale(1.1, 1.1);
+}
+.tabs .active a {
+  color: #006a28;
+}
+
+.table {
+  padding: 25px;
+}
+
+.match-content {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+  background: url(https://image.freepik.com/free-photo/green-grass-textures_74190-5443.jpg);
+  padding: 20px;
+}
+.match-content .calendar {
+  padding: 5px;
+  text-align: center;
+  float: left;
+}
+.match-content .calendar h3 {
+  color: white;
+  font-family: Novecento;
+}
+
+.info-match {
+  display: flex;
+  margin-left: 50px;
+  align-items: center;
+}
+.info-match img {
+  width: 64px;
+  height: 64px;
+}
+.info-match h2 {
+  font-size: 40px;
+  margin: 0px 40px 0px 40px;
+  padding: 20px;
+  color: white;
+  font-family: Novecento;
+}
+
+.match-separator {
+  background: #006a28;
+  margin-top: 30px;
+  padding: 10px;
+  padding-left: 30px;
+}
+.match-separator h3 {
+  font-family: Axiforma;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.statistics {
+  border-collapse: collapse;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-spacing: 5px 5px;
+}
+.statistics thead {
+  border-bottom: 5px solid black;
+}
+.statistics thead tr th {
+  font-family: Novecento;
+  font-size: 15px;
+  padding: 20px;
+}
+.statistics thead tr th.mobile {
+  display: none;
+}
+.statistics tbody tr td {
+  font-size: 15px;
+  text-align: center;
+  font-family: Novecento;
+  padding: 10px;
+}
+.statistics tbody tr.light {
+  background-color: #006a2842;
+}
+
+.positions {
+  padding: 10px;
+}
+.positions .position-title {
+  font-family: Novecento;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.position-content {
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.profile-card {
+  background-color: transparent;
+  width: 150px;
+  height: 200px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+.profile-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.profile-card:hover .profile-card-inner {
+  transform: rotateY(180deg);
+}
+
+.profile-front,
+.profile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.profile-front .picture img {
+  height: 150px;
+  border-radius: 5px 5px 25px 5px;
+}
+.profile-front .team-content .name {
+  padding: 5px;
+  font-family: Axiforma;
+  font-size: 15px;
+}
+
+.profile-back {
+  color: black;
+  transform: rotateY(180deg);
+}
+.profile-back .team-content {
+  padding: 10px;
+}
+.profile-back .team-content .information {
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.profile-back .team-content .information span {
+  font-weight: normal;
+  text-align: center;
+}
+.profile-back .team-content .positionName {
+  font-style: oblique;
+}
+
+.profile-back::after {
+  content: "";
+  background: url(https://s3.amazonaws.com/boletomovil/teams/venados_merida.png);
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  background-color: #004030;
+  display: block;
+  bottom: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 5px;
+}
+.footer p {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 1020px) {
+  .statistics thead tr th {
+    padding: 15px;
+  }
+}
+@media (max-width: 880px) {
+  .statistics thead tr th {
+    padding: 11px;
+  }
+}
+@media (max-width: 790px) {
+  .ico-calendar:before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .match-content .calendar h3 {
+    font-size: 15px;
+  }
+
+  .info-match {
+    margin-left: 30px;
+  }
+  .info-match h2 {
+    font-size: 26px;
+  }
+  .info-match img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .match-content {
+    padding: 15px;
+  }
+
+  .table {
+    padding-top: 15px;
+  }
+
+  .tabs {
+    padding: 5px;
+  }
+  .tabs ul li {
+    font-size: 12px;
+  }
+
+  .match-separator {
+    margin-top: 20px;
+  }
+  .match-separator h3 {
+    font-size: 14px;
+  }
+
+  .statistics thead tr th {
+    padding: 8px;
+  }
+}
+@media (max-width: 730px) {
+  .statistics thead tr th {
+    padding: 5px;
+  }
+}
+@media (max-width: 655px) {
+  .header {
+    height: 90px;
+  }
+  .header .title h1 {
+    line-height: 80px;
+    font-size: 30px;
+  }
+  .header .logo img {
+    width: 60px;
+  }
+
+  .statistics-cointainer {
+    overflow: auto;
+  }
+
+  .statistics thead tr th {
+    padding: 1px;
+    font-size: 12px;
+  }
+  .statistics tbody tr td {
+    font-size: 12px;
+  }
+  .statistics tbody tr td img {
+    width: 50px;
+  }
+
+  .menu ul li {
+    font-size: 12px;
+  }
+
+  .profile-card {
+    width: 100px;
+    height: 170px;
+    padding: 15px;
+    margin: 15px;
+    margin-bottom: 40px;
+  }
+
+  .profile-front .picture img {
+    height: 130px;
+  }
+
+  .profile-back .team-content {
+    padding: 3px;
+  }
+  .profile-back .team-content .name {
+    font-size: 14px;
+  }
+  .profile-back .team-content .positionName {
+    font-size: 12px;
+  }
+  .profile-back .team-content .information {
+    font-size: 14px;
+  }
+  .profile-back .team-content span {
+    font-size: 14px;
+  }
+  .profile-back:after {
+    background-size: contain;
+    top: 30;
+  }
+
+  .positions .position-title {
+    margin-top: 15px;
+  }
+
+  .info-match {
+    margin-left: 25px;
+  }
+  .info-match h2 {
+    font-size: 20px;
+    padding: 10px;
+    font-size: 18px;
+  }
+  .info-match img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .match-content {
+    padding: 10px;
+  }
+  .match-content .calendar {
+    padding: 2px;
+  }
+  .match-content .calendar h3 {
+    font-size: 12px;
+  }
+
+  .match-separator {
+    margin-top: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-collapse {
+    display: block;
+  }
+  .menu-collapse ul {
+    list-style-type: none;
+  }
+  .menu-collapse ul li {
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 45px;
+    font-family: WebSymbolsRegular;
+    display: block;
+    width: 50px;
+  }
+  .menu-collapse ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+
+  .menu-mobile {
+    display: block;
+    margin: 0px auto;
+    background: black;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-x: hidden;
+    transition: 0.5s;
+    width: 0px;
+  }
+  .menu-mobile ul li {
+    font-size: 20px;
+    margin: 0px 20px 0px 20px;
+    letter-spacing: 1px;
+    line-height: 45px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .menu-mobile ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: all 200ms;
+  }
+  .menu-mobile ul li a:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .menu-mobile ul li a#close-btn {
+    position: absolute;
+    top: 10;
+    right: 25px;
+    font-size: 15px;
+    margin-left: 50px;
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 575px) {
+  .positions .position-title {
+    font-size: 18px;
+  }
+
+  .statistics thead tr th.mobile {
+    display: block;
+  }
+  .statistics thead tr th.default {
+    display: none;
+  }
+}
+@media (max-width: 525px) {
+  body {
+    width: 95%;
+  }
+
+  .header {
+    height: 60px;
+    margin-top: 20px;
+    padding: 15px;
+  }
+  .header .title {
+    margin-left: 10px;
+  }
+  .header .title h1 {
+    line-height: 48px;
+    font-size: 24px;
+  }
+  .header .logo {
+    margin-left: 10px;
+  }
+  .header .logo img {
+    width: 48px;
+  }
+
+  .match-content {
+    background: none;
+  }
+  .match-content .ico-calendar {
+    display: none;
+  }
+  .match-content .calendar h3 {
+    color: black;
+    padding-top: 10px;
+  }
+  .match-content .info-match {
+    margin-left: 20px;
+  }
+  .match-content .info-match h2 {
+    color: black;
+    font-size: 14px;
+    padding: 0px;
+  }
+
+  .statistics tbody tr td {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .statistics tbody tr td img {
+    width: 35px;
+  }
+}
+@media (max-width: 490px) {
+  .match-content .info-match {
+    margin-left: 15px;
+  }
+  .match-content .info-match h2 {
+    margin: 0px 12px 0px 12px;
+  }
+
+  .profile-card {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .tabs {
+    padding: 5px;
+    margin-left: 10px;
+  }
+  .tabs ul li {
+    margin: 0px 15px 0px 0px;
+  }
+
+  .match-separator {
+    padding-left: 15px;
+  }
+
+  .table {
+    padding: 10px;
+  }
+}
+@media (max-width: 380px) {
+  .match-content .info-match {
+    margin-left: 10px;
+  }
+  .match-content .info-match h2 {
+    margin: 0px 5px 0px 5px;
+  }
+
+  .match-separator {
+    padding-left: 12px;
+  }
+
+  .table {
+    padding: 8px;
+  }
+}
+@media (max-width: 360px) {
+  .header {
+    height: 45px;
+    margin-top: 15px;
+    padding: 10px;
+  }
+  .header .title {
+    margin-left: 10px;
+  }
+  .header .title h1 {
+    line-height: 40px;
+    font-size: 19px;
+  }
+  .header .logo {
+    margin-left: 10px;
+  }
+  .header .logo img {
+    width: 38px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

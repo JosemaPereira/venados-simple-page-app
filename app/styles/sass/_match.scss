@@ -1,0 +1,84 @@
+@use 'variables';
+
+.tabs {
+  display: inline-block;
+  margin: 0px auto;
+  margin-left: 20px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  ul li {
+    font-size: 15px;
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-family: Helvetica, Arial, sans-serif;
+    a {
+      display: block;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 200ms;
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
+
+  .active {
+    a {
+      color: variables.$color_tertiary_green;
+    }
+  }
+}
+
+.table {
+  padding: 25px;
+}
+.match-content {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+  background: url(https://image.freepik.com/free-photo/green-grass-textures_74190-5443.jpg);
+  padding: 20px;
+  .calendar {
+    padding: 5px;
+    text-align: center;
+    float: left;
+    h3 {
+      color: white;
+      font-family: variables.$font_novecento;
+    }
+  }
+}
+
+.info-match {
+  display: flex;
+  margin-left: 50px;
+  align-items: center;
+  img {
+    width: 64px;
+    height: 64px;
+  }
+  h2 {
+    font-size: 40px;
+    margin: 0px 40px 0px 40px;
+    padding: 20px;
+    color: white;
+    font-family: variables.$font_novecento;
+  }
+}
+
+.match-separator {
+  background: variables.$color_tertiary_green;
+  margin-top: 30px;
+  padding: 10px;
+  padding-left: 30px;
+  h3 {
+    font-family: variables.$font_axioforma;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
