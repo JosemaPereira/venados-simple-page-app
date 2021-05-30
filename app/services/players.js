@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { defaultConfig, HttpClient } from '../providers';
 import { fullFormat } from './date';
 
@@ -23,13 +24,6 @@ export const getPlayersContentRequest = async () => {
       item.birthday_parse = fullFormat(item.birthday);
     });
   });
-  
-  const parsed = keys.map(k =>
-    team[k].map(t => ({
-      ...t,
-      birthday_parse: fullFormat(t.birthday)
-    }))
-  );
 
   return team;
 };

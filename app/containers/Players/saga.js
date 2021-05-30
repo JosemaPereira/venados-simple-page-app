@@ -1,5 +1,5 @@
-import { put, takeLatest, call } from 'redux-saga/effects';
-import * as playersConstants from './constants';
+/* eslint-disable no-console */
+import { put, call } from 'redux-saga/effects';
 import * as actions from './actions';
 import { getPlayersContentRequest } from '../../services';
 

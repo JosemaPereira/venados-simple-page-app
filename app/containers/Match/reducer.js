@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import produce from 'immer';
 import { handleActions } from 'redux-actions';
 import * as matchConstants from './constants';
