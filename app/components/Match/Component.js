@@ -35,10 +35,10 @@ const Match = ({ currentLeague, games, actions: { setLeagueHandlerSaga } }) => {
     </div>
   );
 
-  const monthSeparator = (index, monthItem, id) => {
+  const monthSeparator = (index, monthItem) => {
     if (index === 0) {
       return (
-        <div className="match-separator" key={id}>
+        <div className="match-separator">
           <h3>{currentMonth}</h3>
         </div>
       );
@@ -47,7 +47,7 @@ const Match = ({ currentLeague, games, actions: { setLeagueHandlerSaga } }) => {
     if (monthItem !== currentMonth) {
       currentMonth = monthItem;
       return (
-        <div className="match-separator" key={id}>
+        <div className="match-separator">
           <h3>{currentMonth}</h3>
         </div>
       );
@@ -65,9 +65,9 @@ const Match = ({ currentLeague, games, actions: { setLeagueHandlerSaga } }) => {
             currentMonth = game.month;
           }
           return (
-            <>
-              {monthSeparator(index, game.month, _.uniqueId())}
-              <div className="match-content" key={_.uniqueId()}>
+            <React.Fragment key={_.uniqueId()}>
+              {monthSeparator(index, game.month)}
+              <div className="match-content">
                 <div className="calendar">
                   <span className="ico-calendar" />
                   <h3>{game.datetime_parsed}</h3>
@@ -84,7 +84,7 @@ const Match = ({ currentLeague, games, actions: { setLeagueHandlerSaga } }) => {
                   />
                 </div>
               </div>
-            </>
+            </React.Fragment>
           );
         })}
       </div>

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { put, call } from 'redux-saga/effects';
 import { getStatisticsContentRequest } from '../../services';
 import * as actions from './actions';
