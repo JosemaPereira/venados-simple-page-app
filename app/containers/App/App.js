@@ -8,7 +8,6 @@
  */
 
 import React from 'react';
-import { Switch, Route } from 'react-router';
 import { Main } from '../../components/Main';
 
 export function App() {

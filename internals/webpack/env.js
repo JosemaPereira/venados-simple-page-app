@@ -1,5 +1,5 @@
-'use strict';
-
+/* eslint-disable no-param-reassign */
+/* eslint-disable global-require */
 const fs = require('fs');
 const path = require('path');
 
@@ -9,7 +9,7 @@ const paths = {
   dotenv: resolveApp('.env')
 };
 
-const NODE_ENV = process.env.NODE_ENV;
+const { NODE_ENV } = process.env;
 if (!NODE_ENV) {
   throw new Error(
     'The NODE_ENV environment variable is required but was not specified.'
@@ -17,7 +17,7 @@ if (!NODE_ENV) {
 }
 
 // https://github.com/bkeepers/dotenv#what-other-env-files-can-i-use
-var dotenvFiles = [
+const dotenvFiles = [
   `${paths.dotenv}.${NODE_ENV}.local`,
   `${paths.dotenv}.${NODE_ENV}`,
   // Don't include `.env.local` for `test` environment

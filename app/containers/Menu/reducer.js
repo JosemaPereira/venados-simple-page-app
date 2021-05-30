@@ -8,7 +8,7 @@ const initialState = [
   { title: 'Jugadores', url: '/jugadores' }
 ];
 
-const defaultHandler = (state, action) => state;
+const defaultHandler = state => state;
 
 export const menuReducer = produce(
   handleActions(
