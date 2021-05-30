@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { call, put, takeLatest } from 'redux-saga/effects';
 import * as matchConstants from './constants';
 import { getGamesContentRequest } from '../../services';

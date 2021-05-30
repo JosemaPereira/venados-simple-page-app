@@ -11,7 +11,7 @@ export const setLeagueReducer = payload => ({
   payload
 });
 
-//Saga
+// Saga
 const setLeagueHandlerSaga = payload => ({
   type: matchConstants.SET_LEAGE_SAGA,
   payload
