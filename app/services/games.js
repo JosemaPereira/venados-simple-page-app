@@ -1,5 +1,6 @@
 import { defaultConfig, HttpClient } from '../providers';
 import { dateFormat, monthFormat } from './date';
+import { getGamesMock } from '../mocks/games';
 
 export const getGamesContentRequest = async () => {
   const {
@@ -8,14 +9,21 @@ export const getGamesContentRequest = async () => {
       resource: { game }
     }
   } = defaultConfig;
-  const {
-    data: {
-      data: { games }
-    }
-  } = await HttpClient.get(`${source}${game}`, {
-    headers: { Accept: 'application/json' }
-  });
-  const parsed = games.map(g => ({
+
+  let totalGames = [];
+  try {
+    const {
+      data: {
+        data: { games }
+      }
+    } = await HttpClient.get(`${source}${game}`, {
+      headers: { Accept: 'application/json' }
+    });
+    totalGames = games;
+  } catch (err) {
+    totalGames = getGamesMock();
+  }
+  const parsed = totalGames.map(g => ({
     ...g,
     datetime_parsed: dateFormat(g.datetime),
     month: monthFormat(g.datetime)

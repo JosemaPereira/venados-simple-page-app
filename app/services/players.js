@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { defaultConfig, HttpClient } from '../providers';
 import { fullFormat } from './date';
+import { getPlayersMock } from '../mocks/players';
 
 export const getPlayersContentRequest = async () => {
   const {
@@ -9,21 +10,28 @@ export const getPlayersContentRequest = async () => {
       resource: { players }
     }
   } = defaultConfig;
-  const {
-    data: {
-      data: { team }
-    }
-  } = await HttpClient.get(`${source}${players}`, {
-    headers: { Accept: 'application/json' }
-  });
 
-  const keys = Object.keys(team);
+  let totalPlayers = {};
+  try {
+    const {
+      data: {
+        data: { team }
+      }
+    } = await HttpClient.get(`${source}${players}`, {
+      headers: { Accept: 'application/json' }
+    });
+    totalPlayers = team;
+  } catch (err) {
+    totalPlayers = getPlayersMock();
+  }
+
+  const keys = Object.keys(totalPlayers);
 
   keys.forEach(k => {
-    team[k].forEach(item => {
+    totalPlayers[k].forEach(item => {
       item.birthday_parse = fullFormat(item.birthday);
     });
   });
 
-  return team;
+  return totalPlayers;
 };

@@ -1,4 +1,5 @@
 import { defaultConfig, HttpClient } from '../providers';
+import { getStatisticMock } from '../mocks/statistics';
 
 export const getStatisticsContentRequest = async () => {
   const {
@@ -7,13 +8,20 @@ export const getStatisticsContentRequest = async () => {
       resource: { statistics }
     }
   } = defaultConfig;
-  const {
-    data: {
-      data: { statistics: stats }
-    }
-  } = await HttpClient.get(`${source}${statistics}`, {
-    headers: { Accept: 'application/json' }
-  });
+  let fullStatistics = [];
+  try {
+    const {
+      data: {
+        data: { statistics: stats }
+      }
+    } = await HttpClient.get(`${source}${statistics}`, {
+      headers: { Accept: 'application/json' }
+    });
 
-  return stats;
+    fullStatistics = stats;
+  } catch (err) {
+    fullStatistics = getStatisticMock();
+  }
+
+  return fullStatistics;
 };
